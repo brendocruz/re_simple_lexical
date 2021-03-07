@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset=utf-8>
+	<title>Analisador Léxico</title>
+	<style type="text/css">
+		body {
+			overflow: hidden;
+		}
+
+		textarea {
+			font: 20px monospace;
+		}
+
+		.container-button, .container-text {
+			width: 100%;
+			text-align: center;
+			margin: 10px;
+		}
+
+		button {
+			background: white;
+			border: 1px solid black;
+			border-radius: 20px;
+			font-size: 20px;
+			padding: 5px 10px;
+		}
+
+		div.error {
+			border: 1px solid red;
+			background-color: #F9DCDC;
+			padding: 20px;
+			border-radius: 5px;
+			font-family: sans-serif;
+		}
+
+		div.error::before {
+			content: "ERROR: ";
+			font-weight: bold;
+		}
+
+		div.table {
+			width: 100%;
+			text-align: center;
+		}
+		
+		tr, td, th, table {
+			border: 1px solid black;
+			border-collapse: collapse;
+			padding: 10px;
+		}
+	</style>
+	<script type="text/javascript" defer src=script.js></script>
+</head>
+<body>
+	<div class=container-text>
+		<textarea rows="20" cols="100" id=source></textarea>
+	</div>
+	<div class=container-button>
+		<button onclick="analize()">Analisar</button>
+	</div>
+	<div id=message></div>
+</body>
+</html>
